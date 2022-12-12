@@ -1,0 +1,2 @@
+To compile:
+g++ -std=c++17 main.cc -lsfml-graphics -lsfml-window -lsfml-system
