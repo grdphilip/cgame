@@ -1,4 +1,7 @@
 #include <iostream>
+#include "State/menu_state.h"
+#include "State/game_state.h"
+#include "State/pause_state.h"
 #include <SFML/Graphics.hpp>
 
 int main()
@@ -6,7 +9,7 @@ int main()
     sf::VideoMode mode{640, 640};
     sf::RenderWindow window{mode, "SFML"};
     sf::Clock clock;
-
+    State *state = new Game_state();
     while (window.isOpen())
     {
         sf::Event event;
@@ -28,4 +31,5 @@ int main()
 
         window.display();
     }
+    delete state;
 }
